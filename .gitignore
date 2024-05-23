@@ -1,6 +1,9 @@
 # DS_Store
 .DS_Store
 
+# Assignment instructions
+AI Engineer Assignment (2024).pdf
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
