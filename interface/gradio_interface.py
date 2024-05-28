@@ -4,10 +4,7 @@ import openai
 from data.fetch import fetch_posts, search_posts
 from nlp.processing import preprocess_query, classify_query, fetch_and_preprocess_articles
 from models.bm25 import rank_articles
-from config.settings import OPENAI_API_KEY
-
-# OpenAI API key
-openai.api_key = OPENAI_API_KEY
+from config.settings import client
 
 # Generate background knowledge
 def generate_background_knowledge(top_articles):
@@ -19,7 +16,7 @@ def generate_background_knowledge(top_articles):
 # Generate response using OpenAI
 def generate_response(query, background_knowledge):
     try:
-        response = openai.ChatCompletion.create(
+        response = client.chat.completions.create(
             model="gpt-4o",
             messages=[
                 {"role": "system", "content": "Answer the question based on the question asked and background knowledge provided below"},
