@@ -7,11 +7,22 @@ This project is a Retrieval-Augmented Generation (RAG) system for answering ques
 - Fetches the latest posts from Tech in Asia.
 - Extract specific keywords from users' queries.
 - Preprocesses and ranks articles based on user queries.
-- Generates responses using OpenAI's GPT-4 model.
+- Generates responses using OpenAI's GPT-4o model.
 - Provides a user-friendly interface using Gradio.
 
 ## Choice of LLM
-
+| Aspect              | OpenAI GPT-4                          | Anthropic Claude                     | Google Gemini                     | Meta LLaMA                        | Mistral                             |
+|---------------------|---------------------------------------|--------------------------------------|-----------------------------------|-----------------------------------|-------------------------------------|
+| Model Type          | Private/Closed                        | Private/Closed                       | Private/Closed                    | Open Source                       | Open Source                         |
+| Parameters          | Up to 175B                            | Unknown (Large Scale)                | Unknown (Large Scale)             | 7B to 65B                         | Customizable (Various Sizes)        |
+| API Access          | Requires API Key                      | Requires API Key                     | Free access up to 50 requests/day | No official API, self-hosting required | No official API, self-hosting required |
+| Deployment Cost     | High (due to API usage fees)          | High (due to API usage fees)         | Moderate (limited free usage)     | Low to Moderate (depends on hosting) | Low to Moderate (depends on hosting) |
+| Hosting             | Cloud-based (OpenAI servers)          | Cloud-based (Anthropic servers)      | Cloud-based (Google servers)      | Self-hosting required             | Self-hosting required               |
+| Fine-Tuning         | Supported (via API)                   | Supported (via API)                  | Limited/Not clear                 | Fully supported                   | Fully supported                     |
+| Performance         | State-of-the-art                      | High                                 | High                              | Competitive (varies with size)    | Competitive (varies with size)      |
+| Community Support   | Strong (large user base)              | Growing                              | Growing                           | Strong (active research community) | Moderate (niche community)          |
+| Ease of Use         | High (well-documented)                | High (well-documented)               | Moderate (documentation available) | Moderate (requires setup)         | Moderate (requires setup)           |
+| Scalability         | High (handles large-scale queries)    | High                                 | High                              | High                              | High                                |
 
 ## Choice of Preprocessing
 
