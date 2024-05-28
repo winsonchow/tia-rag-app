@@ -1,15 +1,13 @@
 import os
 import gradio as gr
-from openai import OpenAI
+import openai
 from data.fetch import fetch_posts, search_posts
 from nlp.processing import preprocess_query, classify_query
 from models.bm25 import rank_articles
 from config.settings import OPENAI_API_KEY
 
 # OpenAI API key
-client = OpenAI(
-    api_key=os.environ.get("OPENAI_API_KEY"),
-)
+openai.api_key = OPENAI_API_KEY
 
 # Generate background knowledge
 def generate_background_knowledge(top_articles):
@@ -21,7 +19,7 @@ def generate_background_knowledge(top_articles):
 # Generate response using OpenAI
 def generate_response(query, background_knowledge):
     try:
-        response = client.chat.completions.create(
+        response = openai.ChatCompletion.create(
             model="gpt-4o",
             messages=[
                 {"role": "system", "content": "Answer the question based on the question asked and background knowledge provided below"},
