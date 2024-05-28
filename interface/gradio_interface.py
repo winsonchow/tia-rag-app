@@ -2,7 +2,7 @@ import os
 import gradio as gr
 import openai
 from data.fetch import fetch_posts, search_posts
-from nlp.processing import preprocess_query, classify_query
+from nlp.processing import preprocess_query, classify_query, fetch_and_preprocess_articles
 from models.bm25 import rank_articles
 from config.settings import OPENAI_API_KEY
 
