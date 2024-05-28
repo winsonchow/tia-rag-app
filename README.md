@@ -25,7 +25,14 @@ This project is a Retrieval-Augmented Generation (RAG) system for answering ques
 | Scalability         | High (handles large-scale queries)    | High                                 | High                              | High                              | High                                |
 
 ## Choice of Preprocessing
+| Aspect        | TF-IDF                                  | BM25                                       | Word2Vec                                       | BERT                                               |
+|---------------|-----------------------------------------|--------------------------------------------|------------------------------------------------|----------------------------------------------------|
+| Description   | Statistical measure for word importance | Probabilistic ranking model                | Neural network-based word vectors              | Transformer-based contextual embeddings            |
+| Advantages    | Simple, fast                            | Better relevance ranking, handles long queries | Captures semantic relationships, flexible     | Contextual understanding, state-of-the-art         |
+| Disadvantages | No context, fixed vocabulary            | Requires parameter tuning, more complex    | Context independence, training time            | Computationally intensive, complex to implement     |
+| Use Cases     | Basic information retrieval             | Search engines, complex queries            | Word similarity, clustering, classification    | Advanced NLP tasks, fine-tuning for specific tasks  |
 
+BM25 strikes a balance between performance, relevance, and practicality. It offers improved relevance ranking over TF-IDF and is less resource-intensive compared to advanced models like BERT. For a RAG system where the goal is to provide accurate and contextually relevant answers based on the latest posts, BM25 is an optimal choice.
 
 ## Prerequisities
 - Python 3.9 or higher
