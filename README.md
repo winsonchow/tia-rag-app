@@ -31,7 +31,6 @@ LLaMA, being open-source, presents a cost-effective alternative with high perfor
 
 For this project, I opted for GPT-4o due to its ease of integration and my familiarity with it. In retrospective, in a organisational setting, there are more factors to take into consideration as highlighted on the choice of LLM.
 
-
 ## Choice of Preprocessing
 | Criteria                   | Boolean Retrieval                                                                 | TF-IDF                                                                                  | BM25                                                                                   | Word2Vec                                                                            | BERT-Based Retrieval                                                               |
 |----------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
