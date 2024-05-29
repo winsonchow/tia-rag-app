@@ -48,6 +48,7 @@ BM25 strikes a balance between performance, relevance, and practicality. It offe
 
 ## Installation
 1. Clone the repository
+    - `git clone https://github.com/winsonchow/RAG-app.git`
 
 2. Create a virtual environment
     - `python -m venv venv`
